@@ -13,6 +13,7 @@ import com.netease.mebius.client.exception.MebiusException;
 import com.netease.mebius.client.model.project.GitParam;
 import com.netease.mebius.client.model.project.ProjectParam;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.jacoco.core.internal.diff.ClassInfo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,20 +23,21 @@ import java.util.List;
  * @author chenyiqing@corp.netease.com on 2023/7/18.
  */
 public class CodeTest {
-
+    
     public static void main(String[] args) throws IOException, GitAPIException, MebiusException {
         List<ProjectParam> projectParams = new ArrayList<>();
         ProjectParam projectParam = new ProjectParam();
-        projectParam.setProjectRootPath("/Users/chenyiqing/temp/yx-dubhe");
+        projectParam.setProjectRootPath("/Users/cardo/person/java/demo-java");
         projectParam.setExecType(ExecType.BRANCH_DIFF);
-        projectParam.setCurrentBranch("feature-AIcodeReview");
-        projectParam.setCompareBranch("master");
+        projectParam.setCurrentBranch("");
+        projectParam.setCompareBranch("");
         GitParam gitParam = new GitParam();
         gitParam.setGitAccessType(GitAccessType.ACCESS_TOKEN);
-        gitParam.setGitAccessToken("ryrJy12SfyqNwFi1RVxs");
+        gitParam.setGitAccessToken("");
         projectParam.setGitParam(gitParam);
         projectParams.add(projectParam);
-        CodeDiff.codeDiff(projectParam);
+        List<ClassInfo> classInfos = CodeDiff.codeDiff(projectParam);
+        System.out.println(classInfos);
     }
 
 
