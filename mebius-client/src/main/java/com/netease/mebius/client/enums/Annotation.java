@@ -34,5 +34,7 @@ public enum Annotation {
     Component,
     RpcService,
     RemoteMethod,
-    Servlet
+    Servlet,
+    DubboService,
+    InnerAPI
 }

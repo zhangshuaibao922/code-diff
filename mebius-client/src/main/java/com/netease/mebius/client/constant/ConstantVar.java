@@ -35,7 +35,7 @@ public class ConstantVar {
     /**
      * 接口类型的方法注解
      */
-    public static final String[] INTERFACE_ANNOTATIONS = new String[]{"PostMapping", "GetMapping", "RequestMapping", "RpcUrlMapping"};
+    public static final String[] INTERFACE_ANNOTATIONS = new String[]{"PostMapping", "GetMapping", "RequestMapping", "RpcUrlMapping", "InnerAPI"};
 
     /**
      * GIT token默认用户名

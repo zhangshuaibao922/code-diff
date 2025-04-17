@@ -45,6 +45,8 @@ public class AnnotationUtils {
             annotations.add(Annotation.Component.name());
             annotations.add(Annotation.RpcService.name());
             annotations.add(Annotation.RemoteMethod.name());
+            annotations.add(Annotation.DubboService.name());
+            annotations.add(Annotation.InnerAPI.name());
         }
         return annotations;
     }
