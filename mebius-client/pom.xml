@@ -143,6 +143,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.common</artifactId>
+            <version>3.10.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
@@ -262,6 +263,7 @@
                 <artifactId>maven-source-plugin</artifactId>
                 <configuration>
                     <attach>true</attach>
+                    <defaultManifestFile/>
                 </configuration>
                 <executions>
                     <execution>
