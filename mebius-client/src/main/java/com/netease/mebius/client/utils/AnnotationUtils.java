@@ -35,19 +35,21 @@ public class AnnotationUtils {
      * @return
      */
     public static List<String> init(List<String> annotations) {
+            List<String> NewAnnotations = Lists.newArrayList();
         if (CollectionUtils.isEmpty(annotations)) {
             //暂时只加了接口
-            annotations = Lists.newArrayList();
-            annotations.add(Annotation.Controller.name());
-            annotations.add(Annotation.RestController.name());
-            annotations.add(Annotation.FeignClient.name());
-            annotations.add(Annotation.Service.name());
-            annotations.add(Annotation.Component.name());
-            annotations.add(Annotation.RpcService.name());
-            annotations.add(Annotation.RemoteMethod.name());
-            annotations.add(Annotation.DubboService.name());
-            annotations.add(Annotation.InnerAPI.name());
+            NewAnnotations.add(Annotation.Controller.name());
+            NewAnnotations.add(Annotation.RestController.name());
+            NewAnnotations.add(Annotation.FeignClient.name());
+            NewAnnotations.add(Annotation.Service.name());
+            NewAnnotations.add(Annotation.Component.name());
+            NewAnnotations.add(Annotation.RpcService.name());
+            NewAnnotations.add(Annotation.RemoteMethod.name());
+            NewAnnotations.add(Annotation.DubboService.name());
+            NewAnnotations.add(Annotation.InnerAPI.name());
+        }else {
+            NewAnnotations.addAll(annotations);
         }
-        return annotations;
+        return NewAnnotations;
     }
 }
